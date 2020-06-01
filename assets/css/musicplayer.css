@@ -1,0 +1,647 @@
+
+.border{
+	border:2px solid black;
+	margin: 2px;
+}
+.text{
+	font-size: 1.5rem;
+	font-family: sans-serif;
+	color: white;
+}
+
+
+/*navbar start*/
+#navbar{
+	
+	height: 100px;
+	width: 100%;	
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	background-color: #0b1026;
+	vertical-align: top;
+	top: 0;
+	left: 0;
+}
+/*navbar elements*/
+#icon{
+	height: 80px;
+	width: 80px;
+    background-image: url(images/musicicon.png);
+    background-size: 100%;
+}
+#ninjastudio{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+}
+#favorites{
+	width: 50%;
+	padding-left: 3%;
+	padding-top: 0.5%;
+	font-size: 1rem;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+}
+#search{
+	height: 40px;
+	width: 20%;
+	margin-top:30px;
+	display: flex;
+	flex-direction: row;
+	color: white;
+	background-color: #11193e;
+}
+/*in search section*/
+#searchicon{
+	height: 26px;
+	width: 27px;
+	background-image: url(images/search.png);
+	background-size: 100%;
+	background-color: black;
+}
+#searchtext{
+	width: 80%;
+}
+#mike{
+	height: 30px;
+	width: 30px;
+	background-image: url(images/mike.png);
+	background-size: 100%;
+}
+#bell{
+	height: 35px;
+	width: 35px;
+	background-image: url(images/bell.png);
+	background-size: 100%;
+	margin-top: 30px;
+}
+#circle{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-image:url(images/daler.jpg); 
+	background-size:100%;
+
+}
+/*navbar end*/
+/* main start*/
+#main{
+	height: auto;
+	width: 70%;
+	display: inline-block;
+	margin-top: 100px;
+	
+}
+/*main elemenets*/
+/*1music start*/
+#music{
+	height: 250px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+}
+.musicbox{
+		height: 80%;
+		width:30%;
+		margin: auto;
+		
+}
+.musicbox:hover{
+	transform: scale(1.3);
+	transition: 0.5s ease-in-out;
+	box-shadow: 0px 0px 50px black;
+
+}
+#icona{
+	background-image: url(images/iconapop.jpg);
+}
+
+#john{
+	background-image: url(images/john.jpg);
+}
+#selena{
+	background-image: url(images/selena.jpg);
+
+}
+/*music end*/
+/*2latest release start*/
+#latestrelease{
+	height: 200px;
+	display: flex;
+	flex-direction:row; 
+	flex-wrap: wrap;
+}
+.latestbox{
+	height: 40%;
+	width: 40%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	color: white;
+}
+.lateimage{
+	height: 100%;
+	width: 25%;
+	background-image: url(images/latest.jpg);
+	background-size: 100%;
+}
+.latesttext{
+	height: 100%;
+	width: 60%;
+	display: flex;
+	justify-content:flex-start;
+	align-items:center;
+	font-family: sans-serif;
+}
+.latesttime{
+	height: 100%;
+	width: 15%;
+}
+/*latestrelease end*/
+/*3 popular artist start*/
+#popularartists{
+	height: 150px;
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;	
+}
+.artistbox{
+	height: 110px;
+	width: 110px;
+	border-radius: 50%;
+	margin: auto;
+	background-size: 100%;
+	
+}
+.playicon{
+	height: 40px;
+	width: 40px;
+	background-image: url(images/play.png);
+	background-size: 100%;
+	display: block;
+	margin-left: 40px;
+	margin-top: 45px;
+	opacity: 0;
+}
+.playicon:hover{
+	opacity: 1;
+
+}
+.artistbox:hover{
+	opacity: 0.8;
+
+}
+#edsheeran{
+	background-image: url(images/edsheeran.jpg);
+}
+#rihana{
+	background-image: url(images/rihana.jpg);
+}
+#maroon{
+	background-image: url(images/maroon.jpg);
+}
+#taylor{
+	background-image: url(images/taylor.jpg);
+}
+#justin{
+	background-image: url(images/justin.jpg);
+}
+#bruno{
+	background-image: url(images/bruno.jpg);
+}
+/*popular artist end*/
+/*playlist start*/
+#playlist{
+	height: 130px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.playlistbox{
+		height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: sans-serif;
+	background-size: 100%;
+	
+}
+#playlisticon{
+    background-image: url(images/musicicon.png);
+}
+#love{
+	background-image: url(images/love.jpg);
+}
+#retro{
+	background-image: url(images/retro.jpg);
+}
+#chill{
+	background-image: url(images/chill.jpg);
+}
+#workout{
+	background-image: url(images/workout.jpg);
+}
+#rock{
+	background-image: url(images/rock.jpg);
+}
+#pop{
+	background-image: url(images/pop.jpg);
+}
+/*playlist end*/
+/*genre start*/
+#genre{
+	background-color: black;
+	height: 180px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.genrebox{
+	height: 85%;
+	width: 32%;
+	margin: auto;
+	background-size: 100%;
+	
+	overflow: hidden;
+	
+}
+.center{
+	height: 100%;
+	width: 100%;
+	color: white;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: 100%;
+}
+.center:hover{
+	transform: scale(1.3);
+	transition: 0.5s ease-in-out;
+	
+}
+#party{
+	
+	background-image: url(images/party.jpg);
+}
+#electronic{
+	background-image: url(images/electronic.jpg);
+}
+#roadtrip{
+	background-image: url(images/roadtrip.jpg);
+}
+/*genre end*/
+/*latest English start*/
+#latestenglish{
+	background-color: black;
+	height: 150px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.englishbox{
+	height: 120px;
+	width: 13%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.8rem;
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+}
+.latestimage{
+	height: 80%;
+	width: 100%;
+	background-size: 100%;
+}
+#human{
+	background-image: url(images/human.jpg);
+}
+#wings{
+	background-image: url(images/wings.jpg);
+}
+#space{
+	background-image: url(images/space.jpg);
+}
+#building{
+	background-image: url(images/building.jpg);
+}
+#rose{
+	background-image: url(images/rose.jpg);
+}
+#garden{
+	background-image: url(images/garden.jpg);
+}
+/*latest English end*/
+/*latest hindi start*/
+#latesthindi{
+	height: 120px;
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	flex-wrap: wrap;
+}
+.hindibox{
+	height: 90px;
+	width: 13%;
+	margin: auto;
+}
+/*englishbox code copied for hindibox */
+/*latest English end*/
+
+
+/*about queue*/
+/*queue start*/
+#queue{
+	width: 29%;
+	height: 73vh;
+	display: inline-block;
+	position: fixed;
+	margin-bottom: 50px;
+	margin-top: 100px;
+	overflow: hidden;
+	background-color: black;
+}
+/*queue songs*/
+.songs{
+	width: 97%;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+}
+#head{
+	height: 20px;
+	font-family: sans-serif;
+	color: white;
+}
+.baricon{
+	width: 20px;
+	height:20px;
+	background-image: url(images/sound.png);
+	background-size: 100%; 
+}
+.songimage{
+	width: 12%;
+	height: 90%;
+	background-size: 100%;
+	border-radius: 5px;
+}
+.songtexts{
+	width: 63%;
+	height: 90%;
+	font-family: sans-serif;
+	background-color: black;
+	color: white;
+}
+.hearts{
+	height: 20px;
+	width: 20px;
+	background-image: url(images/heart.png);
+	background-size: 100%;
+}
+
+#song1{
+	background-image: url(images/jain.jpg);
+}
+#song2{
+	background-image: url(images/shapeof.jpg);
+}
+#song3{
+	background-image: url(images/sorry.jpg);
+}
+#song4{
+	background-image: url(images/seeyou.jpg);
+}
+/*queue end*/
+
+/*about footer*/
+/*footer start*/
+#musicfooter{
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+
+}
+/*about music  player in footer*/
+.players{
+	width: 30%;
+	height: 90%;
+	display: flex;
+	flex-direction: row;
+}
+#playersong{
+	width: 12%;
+	height: 70%;
+	background-image: url(images/london.jpg);
+	background-size: 100%;
+	border-radius: 5px;
+}
+#playeraudio{
+	width: 50%;
+}
+#playericon{
+	width: 18%;
+	height: 90%;
+	display: flex;
+	flex-direction: row;
+}
+.playericons{
+	width: 30px;
+	height: 30px;
+	margin: auto;
+	background-size: 100%;
+}
+#pile{
+	background-image: url(images/pile.png);
+}
+#dj{
+	background-image: url(images/dj.png);
+}
+#volume{
+	background-image: url(images/volume.png);
+}
+#arrow{
+	background-image: url(images/arrow.png);
+}
+/*footer end*/
+
+
+/*Artist playlist courosel*/
+#edsheeranplaylist{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all 0.5s ease-in-out;
+}
+#edsheeranplaylist:target{
+	height: 73%;
+	width: 100%;
+	top: 90px;
+	background-color: #0b1026;
+}
+/*In courosel*/
+/*courosel elements*/
+/*1 artist port folio section start*/
+#artistpf{
+	width: 65%;
+	height: 48%;
+	display: inline-block;
+}
+
+#artistimage{
+	width: 30%;
+	height: 100%;
+	display: inline-block;
+	background-image:url(images/edsheeran.jpg);
+	background-size: 100%;
+
+	
+}
+#artistportfolio{
+	width: 67%;
+	height: 97%;
+	display: inline-block;
+	vertical-align: top;
+}
+.artistinfo{
+	width: 80%;
+	height: 40%;
+	margin: auto;
+	margin-top: 10px;
+	color: white;
+	font-family: sans-serif;
+
+}
+#playall{
+	height: 30px;
+	width: 100px;
+	background-image: linear-gradient(to right, #3524b0 ,#be48dd);
+	display: flex;
+	justify-content: center;align-items: center;
+}
+#follow{
+	height: 30px;
+	width: 100px;
+	display: flex;
+	justify-content: center;align-items: center;
+}
+/*artist port folio section end*/
+/*2 similar artist section start*/
+#similarartist{
+	width: 33%;
+	height: 48%;
+	display: inline-block;
+	vertical-align: top;
+}
+/*2 similar artist section end*/
+/*3 artist playlist section start*/
+#artistplaylist{
+	width: 65%;
+	height: 48%;
+	display: inline-block;
+}
+.plus{
+	height: 20px;
+	width: 20px;
+	background-image: url(images/plus.png);
+	background-size: 100%;
+}
+.artistsongtexts{
+	width: 75%;
+	height: 90%;
+	font-family: sans-serif;
+	background-color: black;
+	color: white;
+}
+.artistsongimage{
+	width: 7%;
+	height: 90%;
+	background-size: 100%;
+	border-radius: 5px;
+}
+.similarbox{
+	height: 20%;
+	width: 97%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	color: white;
+}
+/*3  artistp laylist section end*/
+/*4 recently played section start*/
+#recentlyplayed{
+	width: 33%;
+	height: 48%;
+	display: inline-block;
+	vertical-align: bottom;
+}
+/*4 recently played section end*/
+
+/*media queries*/
+@media screen and (max-width:1028px){
+	#popularartists{
+		height: auto;
+	}
+	#playlist{
+		height: auto;
+		margin-top: 50px;
+	}
+	#artistpf{
+		width: 100%;
+		display: block;
+		vertical-align: initial;
+	}
+	#similarartist{
+		width: 100%;
+		display: block;
+		vertical-align: initial;
+	}
+	#artistplaylist{
+		width: 100%;
+		display: block;
+		vertical-align: initial;
+	}
+	#recentlyplayed{
+		width: 100%;
+		display: block;
+		vertical-align: initial;
+	}
+	#edsheeranplaylist{
+		overflow: scroll;
+	}
+	#latesthindi{
+		height: auto;
+	}
+	#latestenglish{
+		height: auto;
+	}
+}
+@media screen and(max-width: 700px){
+	#queue{
+		height: auto;
+		width: 100%;
+		display: block;
+		position: initial;
+		vertical-align: initial;
+	}
+
+}
