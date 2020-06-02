@@ -6,7 +6,7 @@ const router= express.Router();
 const homeController = require('../controllers/home_controller');
 
 //getting musicplayer function of homecontroller
-router.get('/musicplayer',homeController.musicplayer);
+router.post('/musicplayer',homeController.musicplayer);
 
 
 module.exports= router;

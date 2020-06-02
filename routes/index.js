@@ -9,8 +9,8 @@ router.get('/',homeController.home);
 //routing to musicplayer
 router.use('/',require('./musicplayer'));
 //routing to user signup
-router.use('/',homeController.sign_up);
+router.use('/',require('./user_signup'));
 
-//router.post('/create',homeController.create);
+
 
 module.exports=router;
