@@ -3,11 +3,12 @@
     
      <link rel="stylesheet"  href="/css/musicplayer.css">
  
+    <%  if( locals.user ){  %>
  
      <div id="navbar">
          <div id="icon" class="border"></div>
-         <div id="ninjastudio" class="text">Ninjas <br> Studio</div>
-         <div id="favorites" class="border">favorites</div>
+         <div id="ninjastudio" class="text"><%=  user.name %> <br> <%= user.email %></div>
+         <div id="favorites" class="border">favorites <a href="/sign-out" >sign-out</a></div>
          <div id="search" class="border">
              <div id="searchicon"></div>
              <div id="searchtext" class="border">search</div>
@@ -249,4 +250,8 @@
          </div>
          
      </div>
+     <% } else { %>
+        <h1 style="color: white;" >oops!  Login first</h1>
+
+    <% } %>
  

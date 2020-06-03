@@ -4,10 +4,13 @@ const express= require('express');
 const router= express.Router();
 //importng homecontroller
 const homeController = require('../controllers/home_controller');
+const passport= require('passport');
 
 router.get('/',homeController.home);
 //routing to musicplayer
+
 router.use('/',require('./musicplayer'));
+
 //routing to user signup
 router.use('/',require('./user_signup'));
 

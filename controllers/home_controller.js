@@ -11,12 +11,28 @@ module.exports.home = async function(req,res){
     
 }
 
-module.exports.musicplayer = async function(req,res){
+
+module.exports.musicplayer = function(req,res){
     console.log("music player loaded");
     return res.render('musicplayer',{
         title:"musicplayer",
     })
 }
+
+//sign in and create a session for the user
+module.exports.CreateSession = function(req,res){
+
+    return res.redirect('/musicplayer');
+}
+
+module.exports.deleteSession = function(req,res){
+    //logout function given to request by passport
+    req.logout();
+
+    return res.redirect('/');
+}
+
+
 
 
 
