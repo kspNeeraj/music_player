@@ -1,0 +1,72 @@
+.border{
+	border: 2px solid block;
+}
+.main{
+	height: 60Vh;
+	width: 100%;
+	display: flex;
+}
+#artist_genre_trending{
+	height: 100%;
+	width: 59vw;
+}
+#artist{
+	
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space:nowrap;
+	height: 33%;
+	width: 100%
+}
+#artist div{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 20px;
+}
+#genre{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space:nowrap;
+	height: 33%;
+	width: 100%;
+}
+#genre div{
+	height: 80px;
+	width: 150px;
+	display: inline-block;
+	margin: 20px;
+}
+#trending{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space:nowrap;
+	height: 33%;
+	width: 100%;
+}
+#trending div{
+	height: 80px;
+	width: 80px;
+	display: inline-block;
+	margin: 20px;
+}
+
+
+.albums{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space:nowrap;
+	height: 150px;
+	width: 100%;
+}
+.albums div{
+	height: 90px;
+	width: 110px;
+	display: inline-block;
+	margin: 20px
+}
+
+
+
+

@@ -21,14 +21,14 @@ module.exports.musicplayer = function(req,res){
 
 //sign in and create a session for the user
 module.exports.CreateSession = function(req,res){
-
+    req.flash('success',"sign in successfuly");
     return res.redirect('/musicplayer');
 }
 
 module.exports.deleteSession = function(req,res){
     //logout function given to request by passport
     req.logout();
-
+    req.flash('success',"sign out successfuly");
     return res.redirect('/');
 }
 

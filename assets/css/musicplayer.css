@@ -1,5 +1,5 @@
 body{
-	background-color: #0b1026;
+	background-color:white;
 
 }
 .border{
@@ -9,7 +9,7 @@ body{
 .text{
 	font-size: 1.5rem;
 	font-family: sans-serif;
-	color: white;
+	color: black;
 }
 
 
@@ -102,17 +102,27 @@ body{
 }
 /*main elemenets*/
 /*1music start*/
+/* #music{
+	height: 250px;
+	width: 80%;
+	overflow: hidden;
+	-webkit-overflow-scrolling: initial;
+		
+	
+} */
 #music{
 	height: 250px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	
-}
+	width: 80%;
+	position: relative;
+  }
 .musicbox{
 		height: 80%;
-		width:30%;
+		width:80%;
 		margin: auto;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	
+		
 		
 }
 .musicbox:hover{
@@ -123,13 +133,19 @@ body{
 }
 #icona{
 	background-image: url(images/iconapop.jpg);
+	background-repeat: no-repeat;
+		background-size: 100% 100%;
 }
 
 #john{
 	background-image: url(images/john.jpg);
+	background-repeat: no-repeat;
+		background-size: 100% 100%;
 }
 #selena{
 	background-image: url(images/selena.jpg);
+	background-repeat: no-repeat;
+		background-size: 100% 100%;
 
 }
 /*music end*/

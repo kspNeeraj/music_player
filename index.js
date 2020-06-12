@@ -19,6 +19,9 @@ const passportLocal = require('./config/passport-local-strategy');
 
 //importing connect-mongo to store session extra argument is use
 const mongostore = require('connect-mongo')(session);
+const flash = require('connect-flash');
+//custom middleware
+const customWare= require('./config/middleware');
 
 app.use(cookieparser());
 
@@ -72,6 +75,9 @@ app.use(passport.authenticate('session'));
 app.use(passport.setAuthenticatedUser);
 
 
+//to use flah messages
+app.use(flash());
+app.use(customWare.setFlash);
 
 //setting up routeds for controller
 app.use('/',require('./routes'));

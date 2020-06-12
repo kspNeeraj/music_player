@@ -1,0 +1,41 @@
+.albumbox{
+	overflow: hidden;
+	background-size: 100% 100%;
+	color: white;
+	text-align: center;
+		background-image: url("https://musicplayerdig.s3.us-east-2.amazonaws.com/albums/how+i+am+feelin/charliehow.jpg");
+	
+}
+
+
+.albumbox:hover{
+	transform: scale(1.3);
+	transition: 0.5s ease-in-out;
+	
+}
+
+.albumSong{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+
+
+#albumlist{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all  ease-in-out;
+}
+#albumlist:target{
+	height: 85%;
+	width: 100%;
+	top: 0px;	
+	background-color: black;
+	overflow-y: scroll;
+	color: white;
+}
