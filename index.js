@@ -17,6 +17,9 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 
+//importing google strategy
+const passportGoggle = require('./config/passport-google-oauth-strategy');
+
 //importing connect-mongo to store session extra argument is use
 const mongostore = require('connect-mongo')(session);
 const flash = require('connect-flash');

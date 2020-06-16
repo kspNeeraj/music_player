@@ -1,22 +1,69 @@
 //getting User from mongoose
 const User = require('../config/mongoose');
+const allusers = require('../models/user');
+const favArtist= require('../models/favArtist');
+const favSong = require('../models/favSong');
 
 //exporting the home page function to render views
 module.exports.home = async function(req,res){
-    console.log("home page is rendering");
-    return res.render('home',{
+    try {
+        
+        console.log("home page is rendering");
+        return res.render('home',{
         title:"home",
-
-    })
+       
+    });
+    } catch(err){
+        console.log('Error',err);
+        return;
+    }
+    
     
 }
 
 
-module.exports.musicplayer = function(req,res){
-    console.log("music player loaded");
-    return res.render('musicplayer',{
-        title:"musicplayer",
-    })
+module.exports.musicplayer =async function(req,res){
+    try {
+        let allfavSong
+        let favsong = favSong.find({}).populate().exec(function(err,allfavsong){
+            if(err){console.log(err);}
+            else{
+                allfavSong=allfavsong;
+                
+            }
+        });
+       
+        let favartist = favArtist.find({})
+        .populate().exec(function(err,user){
+            if(err){
+                console.log(err);
+                return;
+            }
+            else{
+  //              console.log(user);
+      //          console.log(allfavSong);
+                return res.render('musicplayer',{
+                    title:"musicplayer",
+                    favartists: user,
+                    allfavsong:allfavSong
+               //     user: users
+           
+                });
+            }
+        });
+       
+
+        
+        // let users = allusers.find({});
+
+         console.log("music player loaded");
+     
+         
+    } catch(err){
+        console.log('Error',err);
+        return;
+    }
+    
 }
 
 //sign in and create a session for the user

@@ -1,3 +1,7 @@
+/* body{
+	background-color: black;
+	color: white;
+} */
 .border{
 	border: 2px solid black;
 }
@@ -34,4 +38,13 @@
 #sign_out div{
 	height: 40px;
 	width: 70px;
+}
+
+
+
+
+.textss{
+	/* color: white; */
+	font-family: sans-serif;
+	font-size: 1.2rem;
 }

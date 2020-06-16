@@ -7,7 +7,7 @@ body{
 	background-image: url(images/play.png);
 	background-size: 100%;
 	display: block;
-	margin-left: 20px;
+	margin:auto;
 	opacity: 0;
 }
 .playicon:hover{

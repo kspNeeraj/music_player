@@ -1,3 +1,11 @@
+#home{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .box_size{
     height: 50px;
     width: 90%;
@@ -26,6 +34,12 @@
 }
 
 #user_signup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user_google{
     width: 100%;
     display: flex;
     justify-content: center;
