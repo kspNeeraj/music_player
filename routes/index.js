@@ -18,4 +18,6 @@ router.use('/',require('./user_signup'));
 router.use('/',require('./fav_Artist'));
 
 router.use('/',require('./fav_songs'));
+
+router.use('/',require('./music_playlist'));
 module.exports=router;

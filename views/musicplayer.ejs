@@ -13,10 +13,11 @@
 	<link rel="stylesheet"  href="./css/genre.css">
 	<link rel="stylesheet"  href="./css/queue.css">
     <link rel="stylesheet" href="./css/albums.css">
+    <link rel="stylesheet" href="./css/musicplaylist.css">
     
  
  
-    <%  if( locals.user ){  %>
+<%  if( locals.user ){  %>
         <header>
             <div class="header border">
                 <div id="player_logo" class="border center">
@@ -25,6 +26,8 @@
                 <div id="user_name" class="border">
                     <h2><%=  user.name %></h2>
                     <a class="textss" href="#favor">favorites</a>
+                    <a class="textss" href="#musicplaylist">playlist</a>
+                    <a class="textss" href="#queues">queue</a>
                 </div>
                 <div id="sign_out" class="border center">
                     <a href="/sign-out" class="border" >signout</a>
@@ -108,6 +111,7 @@
                 <div id="song1" class="songimage " ><a onclick="Avici()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/01+Avicii+-+Wake+Me+Up.mp3" ></audio></div>
                 <div  class="songtexts" ><b>Wake me up</b> <br>Avici</div>
                 <a  class="hearts" href="/togglefavsong/?name=wake me up&id=song1&onclic=Avici()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/01+Avicii+-+Wake+Me+Up.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=wake me up&id=song1&onclic=Avici()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/01+Avicii+-+Wake+Me+Up.mp3"></a>
             </div>
             
             <div  class="songs " >
@@ -115,6 +119,7 @@
                 <div id="song2" class="songimage " ><a onclick="charlie()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/04+Icona+Pop+Feat+Charli+XCX+-+I+Love+It.mp3"></audio></div>
                 <div  class="songtexts " ><b>Icona pop</b> <br>Charlie XCX</div>
                 <a  class="hearts" href="/togglefavsong/?name=Iconapop&id=song2&onclic=charlie()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/04+Icona+Pop+Feat+Charli+XCX+-+I+Love+It.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=Iconapop&id=song2&onclic=charlie()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/04+Icona+Pop+Feat+Charli+XCX+-+I+Love+It.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
@@ -122,66 +127,77 @@
     
                 <div  class="songtexts " ><b>blurred lines</b> <br>pharell</div>
                 <a  class="hearts" href="/togglefavsong/?name=blurredlines&id=song3&onclic=pharell()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/02+Robin+Thicke+Feat+T.I.+&+Pharrell+-+Blurred+Lines.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=blurredlines&id=song3&onclic=pharell()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/02+Robin+Thicke+Feat+T.I.+&+Pharrell+-+Blurred+Lines.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song4" class="songimage " ><a onclick="william()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/05+Will.i.am+-+Bang+Bang.mp3"></audio></div>
                 <div  class="songtexts " ><b>Bang-bang</b><br>william</div>
                 <a  class="hearts" href="/togglefavsong/?name=Bang-Bang&id=song4&onclic=william()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/05+Will.i.am+-+Bang+Bang.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=Bang-Bang&id=song4&onclic=william()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/05+Will.i.am+-+Bang+Bang.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon"></div>
                 <div id="song5" class="songimage " ><a onclick="sam_smith()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/06+Naughty+Boy+Feat+Sam+Smith+-+La+La+La.mp3"></audio></div>
                 <div  class="songtexts" ><b>naughty boy</b> <br>sam smith</div>
                 <a  class="hearts" href="/togglefavsong/?name=naughtyboy&id=song5&onclic=sam_smith()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/06+Naughty+Boy+Feat+Sam+Smith+-+La+La+La.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=naughtyboy&id=song5&onclic=sam_smith()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/06+Naughty+Boy+Feat+Sam+Smith+-+La+La+La.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song6" class="songimage " ><a onclick="tommy_trash()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/07+Sebastian+Ingrosso%2C+Tommy+Trash+%26+John+Martin+-+Reload.mp3"></audio></div>
                 <div  class="songtexts " ><b>sebastian</b> <br>tommy trash</div>
                 <a  class="hearts" href="/togglefavsong/?name=sebastian&id=song6&onclic=tommy_trash()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/07+Sebastian+Ingrosso,+Tommy+Trash+&+John+Martin+-+Reload.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=sebastian&id=song6&onclic=tommy_trash()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/07+Sebastian+Ingrosso,+Tommy+Trash+&+John+Martin+-+Reload.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song7" class="songimage " ><a onclick="selena()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/08+Selena+Gomez+-+Come+%26+Get+It.mp3"></audio></div>
                 <div  class="songtexts " ><b>come and get it</b> <br>Selena</div>
                 <a  class="hearts" href="/togglefavsong/?name=come and getit&id=song7&onclic=selena()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/08+Selena+Gomez+-+Come+&+Get+It.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=come and getit&id=song7&onclic=selena()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/08+Selena+Gomez+-+Come+&+Get+It.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song8" class="songimage " ><a onclick="jack()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/09+Breach+-+Jack.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>breach</b><br>jack</div>
                 <a  class="hearts" href="/togglefavsong/?name=breach&id=song8&onclic=jack()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/09+Breach+-+Jack.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=breach&id=song8&onclic=jack()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/09+Breach+-+Jack.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song9" class="songimage " ><a onclick="passengers()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/10+Passenger+-+Let+Her+Go.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>Let her go</b><br>passengers</div>
                 <a  class="hearts" href="/togglefavsong/?name=Let her go&id=song9&onclic=passengers()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/10+Passenger+-+Let+Her+Go.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=Let her go&id=song9&onclic=passengers()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/10+Passenger+-+Let+Her+Go.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song10" class="songimage " ><a onclick="pharrell()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/11+Daft+Punk+Feat+Pharrell+Williams+-+Get+Lucky.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>daft</b><br>pharrell</div>
                 <a  class="hearts" href="/togglefavsong/?name=daft&id=song10&onclic=pharrell()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/11+Daft+Punk+Feat+Pharrell+Williams+-+Get+Lucky.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=daft&id=song10&onclic=pharrell()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/11+Daft+Punk+Feat+Pharrell+Williams+-+Get+Lucky.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song11" class="songimage " ><a onclick="jason_derullo()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/12+Jason+Derulo+-+The+Other+Side.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>the other side</b><br>jason derullo</div>
                 <a  class="hearts" href="/togglefavsong/?name=the other side&id=song11&onclic=jason_derullo()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/12+Jason+Derulo+-+The+Other+Side.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=the other side&id=song11&onclic=jason_derullo()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/12+Jason+Derulo+-+The+Other+Side.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song12" class="songimage " ><a onclick="taylor_swift()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/13+Taylor+Swift+Feat+Ed+Shreeran+-+Everything+Has+Changed.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>everything</b><br>taylor swift</div>
                 <a  class="hearts" href="/togglefavsong/?name=everything&id=song12&onclic=taylor_swift()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/13+Taylor+Swift+Feat+Ed+Shreeran+-+Everything+Has+Changed.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=everything&id=song12&onclic=taylor_swift()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/13+Taylor+Swift+Feat+Ed+Shreeran+-+Everything+Has+Changed.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song13" class="songimage " ><a onclick="Avril()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/14+Avril+Lavigne+-+Here's+To+Never+Growing+Up+(Explicit+Edit).mp3"></audio></a></div>
                 <div  class="songtexts " ><b>never growing </b><br>Avril</div>
                 <a  class="hearts" href="/togglefavsong/?name=never growing&id=song13&onclic=Avril()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/14+Avril+Lavigne+-+Here's+To+Never+Growing+Up+(Explicit+Edit).mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=never growing&id=song13&onclic=Avril()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/14+Avril+Lavigne+-+Here's+To+Never+Growing+Up+(Explicit+Edit).mp3"></a>
             </div>
             
             <div  class="songs " >
@@ -189,45 +205,52 @@
                 <div id="song14" class="songimage " ><a onclick="bruno()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/16+Bruno+Mars+-+Treasure+(Explicit+Edit).mp3"></audio></a></div>
                 <div  class="songtexts " ><b>treasure</b><br>bruno</div>
                 <a  class="hearts" href="/togglefavsong/?name=treasure&id=song14&onclic=bruno()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/16+Bruno+Mars+-+Treasure+(Explicit+Edit).mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=treasure&id=song14&onclic=bruno()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/16+Bruno+Mars+-+Treasure+(Explicit+Edit).mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song15" class="songimage " ><a onclick="timberlake()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/15+Jay-Z+Feat+Justin+Timberlake+-+Holy+Grail.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>Holy grail</b><br>justin timberlake</div>
                 <a  class="hearts" href="/togglefavsong/?name=Holy grail&id=song15&onclic=timberlake()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/15+Jay-Z+Feat+Justin+Timberlake+-+Holy+Grail.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=Holy grail&id=song15&onclic=timberlake()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/15+Jay-Z+Feat+Justin+Timberlake+-+Holy+Grail.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song16" class="songimage " ><a onclick="louis()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/17+Chase+%26+Status+Feat+Louis+M%5Ettrs+-+Lost+%26+Not+Found.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>not found</b><br>Louis</div>
                 <a  class="hearts" href="/togglefavsong/?name=not found&id=song16&onclic=louis()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/17+Chase+&+Status+Feat+Louis+M^ttrs+-+Lost+&+Not+Found.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=not found&id=song16&onclic=louis()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/17+Chase+&+Status+Feat+Louis+M^ttrs+-+Lost+&+Not+Found.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song17" class="songimage " ><a onclick="murs()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/18+Olly+Murs+-+Dear+Darlin'.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>Dear darlin</b><br>Olly murs</div>
                 <a  class="hearts" href="/togglefavsong/?name=Dear darlin&id=song17&onclic=murs()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/18+Olly+Murs+-+Dear+Darlin'.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=Dear darlin&id=song17&onclic=murs()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/18+Olly+Murs+-+Dear+Darlin'.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song18" class="songimage " ><a onclick="lawson()"  class="play" ></a><audio class="queue_songs" src="https://musicplhayerdig.s3.us-east-2.amazonaws.com/music/19+Lawson+Feat+B.o.B+-+Brokenhearted.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>Brokenhearted</b><br>Lawson</div>
                 <a  class="hearts" href="/togglefavsong/?name=BrokenHearted&id=song18&onclic=lawson()&source=https://musicplhayerdig.s3.us-east-2.amazonaws.com/music/19+Lawson+Feat+B.o.B+-+Brokenhearted.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=BrokenHearted&id=song18&onclic=lawson()&source=https://musicplhayerdig.s3.us-east-2.amazonaws.com/music/19+Lawson+Feat+B.o.B+-+Brokenhearted.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song19" class="songimage " ><a onclick="jessie()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/20+Jessie+J+Feat+Big+Sean+%26+Dizzee+Rascal+-+Wild.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>Dizzee</b><br>jessie</div>
                 <a  class="hearts" href="/togglefavsong/?name=Dizzee&id=song19&onclic=jessie()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/20+Jessie+J+Feat+Big+Sean+%26+Dizzee+Rascal+-+Wild.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=Dizzee&id=song19&onclic=jessie()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/20+Jessie+J+Feat+Big+Sean+%26+Dizzee+Rascal+-+Wild.mp3"></a>
             </div>
             <div  class="songs " >
                 <div class="baricon "></div>
                 <div id="song20" class="songimage " ><a onclick="Arctic()"  class="play" ></a><audio class="queue_songs" src="https://musicplayerdig.s3.us-east-2.amazonaws.com/music/21+Arctic+Monkeys+-+Do+I+Wanna+Know.mp3"></audio></a></div>
                 <div  class="songtexts " ><b>Do i wanna</b><br>Arctic Monkeys</div>
                 <a  class="hearts" href="/togglefavsong/?name=Do i wanna&id=song20&onclic=Arctic()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/21+Arctic+Monkeys+-+Do+I+Wanna+Know.mp3"></a>
+                <a  class="plus" href="/toggleAddtoplaylist/?name=Do i wanna&id=song20&onclic=Arctic()&source=https://musicplayerdig.s3.us-east-2.amazonaws.com/music/21+Arctic+Monkeys+-+Do+I+Wanna+Know.mp3"></a>
             </div>
     
-            <a  class="hearts" href="/togglefavsong/?name&id=song1&onclic=&source="></a>
+            <!-- <a  class="hearts" href="/togglefavsong/?name&id=song1&onclic=&source="></a> -->
             
         
             
@@ -779,13 +802,28 @@
                 <% } %>
                 </ul>
             </div>
-            <div class="favoritebox ">favorite albums</div>
+            
         </div>
                 
     </div>
 
-    <% } else { %>
+    <!-- playlist -->
+    <div id="musicplaylist">
+        <h1>Playlist</h1><div id="playall" onclick="changeArtist('userplaylist')" >Play all</div><span><a href="#" style="color: white">X(close)</a></span>
+        <ul style="width: 100%;">
+            <% for (song of allplaylistSong){ %>
+                <%- include('_playlist') -%>
+            <% } %>
+        </ul>
+        
+    </div>
+
+<% } else { %>
+
         <h1 >oops!  Login first</h1>
 
-    <% } %>
+<% } %>
+
  
+
+

@@ -3,6 +3,7 @@ const User = require('../config/mongoose');
 const allusers = require('../models/user');
 const favArtist= require('../models/favArtist');
 const favSong = require('../models/favSong');
+const MusicPlaylist = require('../models/musicplaylist');
 
 //exporting the home page function to render views
 module.exports.home = async function(req,res){
@@ -32,9 +33,16 @@ module.exports.musicplayer =async function(req,res){
                 
             }
         });
+        let allplaylistsong;
+        let playlist = MusicPlaylist.find({}).populate().exec(function(err,playlistSongs){
+            if(err){console.log(err)}
+            else{
+                allplaylistsong=playlistSongs;
+            }
+        })
        
-        let favartist = favArtist.find({})
-        .populate().exec(function(err,user){
+        let favartist =  favArtist.find({})
+        .populate().exec( async function(err,user){
             if(err){
                 console.log(err);
                 return;
@@ -42,10 +50,13 @@ module.exports.musicplayer =async function(req,res){
             else{
   //              console.log(user);
       //          console.log(allfavSong);
-                return res.render('musicplayer',{
+ //               console.log(allplaylistsong);
+                  return res.render('musicplayer',{
                     title:"musicplayer",
                     favartists: user,
-                    allfavsong:allfavSong
+                    allfavsong:allfavSong,
+                    allplaylistSong:allplaylistsong
+                    
                //     user: users
            
                 });

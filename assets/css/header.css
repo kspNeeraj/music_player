@@ -28,8 +28,9 @@
 	background-repeat: no-repeat;
 }
 #user_name{
+	display: inline-block;
 	height: 100px;
-	width: 50%
+	width: 50%;
 }
 #sign_out{
 	height: 100px;

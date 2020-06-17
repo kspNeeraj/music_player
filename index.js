@@ -8,6 +8,8 @@ const port= 8000;
 //importing express-ejs-layouts
 const expressLayouts= require('express-ejs-layouts');
 
+//importing lints
+const ejslints = require('ejs');
 //importing db
 const db= require('./config/mongoose');
 

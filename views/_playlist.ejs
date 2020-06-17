@@ -1,0 +1,10 @@
+<li style="width: 100%;">
+    <% if(locals.user.id==song.user){ %>
+        <div  class="artistSong userplaylist" >   
+            <div class="baricon1 "></div>
+            <div id="<%= song.id %>" class="songimage " ><a onclick="<%= song.onclic %>"  class="play1" ></a><audio class="queue_songs" src="<%= song.source %>"></audio></a></div>
+            <div  class="songtexts " ><b><%= song.name %></b></div>
+        </div>
+           
+    <% } %>
+</li>
