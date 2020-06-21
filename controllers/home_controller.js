@@ -1,4 +1,5 @@
 //getting User from mongoose
+
 const User = require('../config/mongoose');
 const allusers = require('../models/user');
 const favArtist= require('../models/favArtist');
@@ -23,26 +24,34 @@ module.exports.home = async function(req,res){
 }
 
 
+   
+
 module.exports.musicplayer =async function(req,res){
     try {
-        let allfavSong
-        let favsong = favSong.find({}).populate().exec(function(err,allfavsong){
-            if(err){console.log(err);}
+       
+        let allfavSong;
+        let favsong = favSong.find({}).populate().exec(  function(err,allfavsong){
+            if(err){
+                console.log(err);
+                return;
+            }
             else{
                 allfavSong=allfavsong;
-                
             }
         });
         let allplaylistsong;
-        let playlist = MusicPlaylist.find({}).populate().exec(function(err,playlistSongs){
-            if(err){console.log(err)}
-            else{
-                allplaylistsong=playlistSongs;
+        let playlistsong = favSong.find({}).populate().exec(  function(err,allplaylistSong){
+            if(err){
+                console.log(err);
+                return;
             }
-        })
+            else{
+                allplaylistsong=allplaylistSong;
+            }
+        });
        
-        let favartist =  favArtist.find({})
-        .populate().exec( async function(err,user){
+        let favartist = await favArtist.find({})
+        .populate().exec( function(err,user){
             if(err){
                 console.log(err);
                 return;

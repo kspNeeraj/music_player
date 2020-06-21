@@ -169,6 +169,7 @@ body{
 
 }
 #playall{
+	cursor: pointer;
 	height: 30px;
 	width: 100px;
 	background-image: linear-gradient(to right, #3524b0 ,#be48dd);
