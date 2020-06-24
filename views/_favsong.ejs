@@ -1,5 +1,6 @@
+<% if(locals.user.id==song.user){ %>
 <li id="favsong-<%= song.id %>" class="lifavsong" >
-    <% if(locals.user.id==song.user){ %>
+   
         <div class="favsongs">
             <div class="baricon "></div>
             <div id="<%= song.id %>" class="songimage " ><a onclick="<%= song.onclic %>"  class="play" ></a><audio class="queue_songs" src="<%= song.source %>"></audio></a></div>
@@ -9,6 +10,7 @@
     
       
     
-    <% } %>
+   
     
 </li>
+<% } %>

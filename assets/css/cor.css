@@ -113,3 +113,22 @@
 .playiconimage:hover{
   opacity: 1;
 }
+
+@media (max-width:880px){
+	.coroselbox{
+     height: 500px; 
+    
+  }
+}
+@media (max-width:700px){
+	.coroselbox{
+     height: 400px; 
+    
+  }
+}
+@media (max-width:600px){
+	.coroselbox{
+     height: 300px; 
+    
+  }
+}

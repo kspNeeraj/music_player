@@ -23,32 +23,33 @@ module.exports.home = async function(req,res){
     
 }
 
+let allfavSong;
+let favsong = favSong.find({}).populate().exec(  function(err,allfavsong){
+    if(err){
+        console.log(err);
+        return;
+    }
+    else{
+        allfavSong=allfavsong;
+    }
+});
+let allplaylistsong;
+let playlistsong = favSong.find({}).populate().exec(  function(err,allplaylistSong){
+    if(err){
+        console.log(err);
+        return;
+    }
+    else{
+        allplaylistsong=allplaylistSong;
+    }
+});
 
    
 
 module.exports.musicplayer =async function(req,res){
     try {
        
-        let allfavSong;
-        let favsong = favSong.find({}).populate().exec(  function(err,allfavsong){
-            if(err){
-                console.log(err);
-                return;
-            }
-            else{
-                allfavSong=allfavsong;
-            }
-        });
-        let allplaylistsong;
-        let playlistsong = favSong.find({}).populate().exec(  function(err,allplaylistSong){
-            if(err){
-                console.log(err);
-                return;
-            }
-            else{
-                allplaylistsong=allplaylistSong;
-            }
-        });
+       
        
         let favartist = await favArtist.find({})
         .populate().exec( function(err,user){

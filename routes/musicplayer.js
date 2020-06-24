@@ -17,8 +17,7 @@ router.post('/musicplayer',passport.authenticate(
     { failureRedirect: 'back' }
 ),homeController.CreateSession);
 
-//for destroy the session and signout
-router.get('/sign-out',homeController.deleteSession);
+
 
 //get information from google
 router.get('/auth/google',passport.authenticate('google',{scope:['profile','email']}));

@@ -1,6 +1,10 @@
 body{
 	margin-bottom: 100px;
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
 }
+
 .playicon{
 	height: 40px;
 	width: 40px;

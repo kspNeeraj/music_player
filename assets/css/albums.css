@@ -39,3 +39,8 @@
 	overflow-y: scroll;
 	color: white;
 }
+
+
+.albums::-webkit-scrollbar { 
+    display: none;  
+}

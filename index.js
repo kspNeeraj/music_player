@@ -13,6 +13,8 @@ const ejslints = require('ejs');
 //importing db
 const db= require('./config/mongoose');
 
+//importing noty
+const noty= require('noty');
 
 //importing express-session for session cookies
 const session = require('express-session');

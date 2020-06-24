@@ -7,6 +7,9 @@
 	overflow: hidden;
 	overflow-y: scroll;
 }
+#playlist::-webkit-scrollbar { 
+    display: none;  
+}
 
 /*queue songs*/
 .songs{
@@ -138,4 +141,23 @@
 }
 .play:hover{
 	opacity: 1;
+}
+
+
+
+@media (max-width:880px){
+	#playlist{
+		
+		width: 50vw;
+		
+	}
+
+}
+
+@media (max-width:600px){
+	#playlist{
+		
+		width: 100%;
+		
+	}
 }

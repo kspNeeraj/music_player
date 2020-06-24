@@ -30,16 +30,33 @@
 	background-size: 100% 100%;
 }
 
-#song_logo{
+#music_logo{
 	height: 100px;
 	width: 20%;
+}
+#music_logo div{
+	height:30px;
+	width: 40px;
+	background-image: url(images/sound.png);
+	background-size: 100% 100%;
 }
 
 #song{
 	height: 100px;
 	width: 60%;
 }
-#favorite{
-	height: 100px;
-	width: 20%;
+#forward{
+	cursor: pointer;
+	height: 30px;
+	width: 40px;
+	background-image: url(images/forward.png);
+	background-size: 100% 100%;
 }
+#backward{
+	cursor: pointer;
+	height: 30px;
+	width: 40px;
+	background-image: url(images/backward.png);
+	background-size: 100% 100%;
+}
+

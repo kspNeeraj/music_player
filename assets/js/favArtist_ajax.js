@@ -1,3 +1,4 @@
+{
 // CHANGE :: create a class to toggle likes when a link is clicked, using AJAX
 console.log("favArtist ajax loaded");
 // $('#link').click(function(ev){
@@ -45,6 +46,15 @@ class toggle_favartist{
                     console.log(data);
                     let newArtist = newfavartistDom(data.data.newFavArtist);
                     $('#favartist').append(newArtist);
+                    new Noty({
+                        theme: 'relax',
+                        text: "fav artist added",
+                        type: 'success',
+                        layout: 'topRight',
+                        timeout: 1500
+                        
+                    }).show();
+                    
                 }
             })
             .fail(function(errData) {
@@ -78,3 +88,6 @@ $('.togglefavArtist').each(function(){
 //    console.log(self);
     let toggle = new toggle_favartist(self);
 });
+
+}
+

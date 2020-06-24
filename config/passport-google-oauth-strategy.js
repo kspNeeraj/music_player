@@ -18,7 +18,7 @@ passport.use(new googleStrategy({
             //if user found or existed in db
             if(user){
                 //if found then st this user as req.user
-                return done(user,null);
+                return done(null,user);
             }
             //if user not found then create one
             else{
@@ -40,3 +40,4 @@ passport.use(new googleStrategy({
     
 ));
 
+module.exports = passport;

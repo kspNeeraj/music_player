@@ -14,6 +14,8 @@ router.use('/',require('./musicplayer'));
 //routing to user signup
 router.use('/',require('./user_signup'));
 
+router.use('/',require('./sign_out'));
+
 //routong to fav artist
 router.use('/',require('./fav_Artist'));
 

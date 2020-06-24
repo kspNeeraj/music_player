@@ -1,10 +1,12 @@
+<% if(locals.user.id==artist.user){ %>
 <li id="fav-<%= artist.name %>">
     <!-- <% console.log(locals.user.id==artist.user) %> -->
-    <% if(locals.user.id==artist.user){ %>
+   
 
       
         <div class="favartist" id="<%= artist.name %>"><a href="#<%= artist.image %>" class="playicon" ></a></div>
-    
-    <% } %>
+
 
 </li>
+
+<% } %>
