@@ -12,6 +12,9 @@ router.get('/',homeController.home);
 router.use('/',require('./musicplayer'));
 
 //routing to user signup
+router.use('/',require('./forgetpassword'));
+
+//routing to user signup
 router.use('/',require('./user_signup'));
 
 router.use('/',require('./sign_out'));

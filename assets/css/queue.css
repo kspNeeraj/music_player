@@ -50,6 +50,10 @@
 	background-color: black;
 	color: white;
 }
+.Addto{
+	color: magenta;
+	cursor: pointer;
+}
 .hearts{
 	height: 20px;
 	width: 20px;
