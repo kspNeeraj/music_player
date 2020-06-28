@@ -1,6 +1,6 @@
 //importing mongoose
 const mongoose = require('mongoose');
-
+//creating musicplaylist schema
 const musicplaylistSchema = new mongoose.Schema({
     name:{
         type:String,

@@ -1,114 +1,115 @@
-.playico{
-	height: 40px;
-	width: 40px;
-	background-image: url(images/play.png);
-	background-size: 100%;
-	display: block;
-	margin: auto;
-	margin-top: 20px;
-	opacity: 0;
-}
-.playico:hover{
-	opacity: 1;
+.playico {
+  height: 40px;
+  width: 40px;
+  background-image: url(images/play.png);
+  background-size: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  opacity: 0;
 }
 
-.genrebox{
-	overflow: hidden;
-	background-size: 100% 100%;
-	color: white;
-	text-align: center;
-	
-}
-.genrebox:hover{
-	transform: scale(1.3);
-	transition: 0.5s ease-in-out;
-	
+.playico:hover {
+  opacity: 1;
 }
 
-#party{
-	
-	background-image: url(images/party.jpg);
-}
-#electronic{
-	background-image: url(images/electronic.jpg);
-}
-#roadtrip{
-	background-image: url(images/roadtrip.jpg);
-}
-#relax{
-	background-image: url(images/wings.jpg);
+.genrebox {
+  overflow: hidden;
+  background-size: 100% 100%;
+  color: white;
+  text-align: center;
 }
 
-
-
-
-.genreSong{
-	width: 100%;
-	height: 100px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	
+.genrebox:hover {
+  transform: scale(1.3);
+  transition: 0.5s ease-in-out;
 }
 
-#partyplaylist{
-	height: 0;
-	width: 0;
-	position: fixed;
-	transition: all  ease-in-out;
-}
-#partyplaylist:target{
-	height: 85%;
-	width: 100%;
-	top: 0px;	
-	background-color: black;
-	overflow-y: scroll;
-	color: white;
-}
-#roadtripplaylist{
-	height: 0;
-	width: 0;
-	position: fixed;
-	transition: all  ease-in-out;
-}
-#roadtripplaylist:target{
-	height: 85%;
-	width: 100%;
-	top: 0px;	
-	background-color: black;
-	overflow-y: scroll;
-	color: white;
+#party {
+  background-image: url(images/party.jpg);
 }
 
-#electronicplaylist{
-	height: 0;
-	width: 0;
-	position: fixed;
-	transition: all  ease-in-out;
-}
-#electronicplaylist:target{
-	height: 85%;
-	width: 100%;
-	top: 0px;	
-	background-color: black;
-	overflow-y: scroll;
-	color: white;
-}
-#relaxplaylist{
-	height: 0;
-	width: 0;
-	position: fixed;
-	transition: all  ease-in-out;
-}
-#relaxplaylist:target{
-	height: 85%;
-	width: 100%;
-	top: 0px;	
-	background-color: black;
-	overflow-y: scroll;
-	color: white;
+#electronic {
+  background-image: url(images/electronic.jpg);
 }
 
+#roadtrip {
+  background-image: url(images/roadtrip.jpg);
+}
 
+#relax {
+  background-image: url(images/wings.jpg);
+}
 
+.genreSong {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#partyplaylist {
+  height: 0;
+  width: 0;
+  position: fixed;
+  transition: all  ease-in-out;
+}
+
+#partyplaylist:target {
+  height: 85%;
+  width: 100%;
+  top: 0px;
+  background-color: black;
+  overflow-y: scroll;
+  color: white;
+}
+
+#roadtripplaylist {
+  height: 0;
+  width: 0;
+  position: fixed;
+  transition: all  ease-in-out;
+}
+
+#roadtripplaylist:target {
+  height: 85%;
+  width: 100%;
+  top: 0px;
+  background-color: black;
+  overflow-y: scroll;
+  color: white;
+}
+
+#electronicplaylist {
+  height: 0;
+  width: 0;
+  position: fixed;
+  transition: all  ease-in-out;
+}
+
+#electronicplaylist:target {
+  height: 85%;
+  width: 100%;
+  top: 0px;
+  background-color: black;
+  overflow-y: scroll;
+  color: white;
+}
+
+#relaxplaylist {
+  height: 0;
+  width: 0;
+  position: fixed;
+  transition: all  ease-in-out;
+}
+
+#relaxplaylist:target {
+  height: 85%;
+  width: 100%;
+  top: 0px;
+  background-color: black;
+  overflow-y: scroll;
+  color: white;
+}

@@ -1,0 +1,13 @@
+.playic{
+	height: 40px;
+	width: 40px;
+	background-image: url(images/play.png);
+	background-size: 100%;
+	display: block;
+	margin-left: 20px;
+	opacity: 0;
+}
+.playic:hover{
+	opacity: 1;
+}
+

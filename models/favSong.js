@@ -1,6 +1,6 @@
 //importing mongoose
 const mongoose = require('mongoose');
-
+//creating favsong schema 
 const favsongSchema = new mongoose.Schema({
     name:{
         type:String,
@@ -21,7 +21,11 @@ const favsongSchema = new mongoose.Schema({
     user:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User'
-    }
+    },
+    likes_count:[{
+        type:mongoose.Schema.ObjectId,
+        ref:'Trending'
+    }]
 });
 
 const favSong = mongoose.model('favSong',favsongSchema);

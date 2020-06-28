@@ -11,6 +11,7 @@ exports.forget_password = (email) => {
         from: "musicplayer",
         to: email,
         subject: "password: change",
+        //the html  text which has to be delivered 
         html:`<h1> your high security password: is <h2> ${password} </h2>  </h1>  `
     },(err, info) => {
         //call back function

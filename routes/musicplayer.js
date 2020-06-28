@@ -9,7 +9,18 @@ const passport = require('passport');
 const homeController = require('../controllers/home_controller');
 const { Passport } = require('passport');
 
+//routing to music player 
 router.get('/musicplayer',homeController.musicplayer);
+
+//routing to music player if user request to reset password from musicplayer page
+router.get('/resetpassword',function(req,res){
+    return res.redirect('/musicplayer');
+});
+//routing to music player if user request to reset sign up from musicplayer page
+router.get('/sign_up',function(req,res){
+    return res.redirect('/musicplayer');
+});
+
 
 //getting musicplayer function of homecontroller // use passport middleware to authenticate
 router.post('/musicplayer',passport.authenticate(

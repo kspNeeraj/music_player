@@ -1,0 +1,24 @@
+#queues{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all  ease-in-out;
+}
+#queues:target{
+	height: 85%;
+	width: 100%;
+	top: 0px;	
+	background-color: black;
+	overflow-y: scroll;
+	color: white;
+}
+
+.queueSongs{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+}

@@ -1,6 +1,7 @@
 //importing favsong
 const favSongs = require('../models/favSong');
 
+//creating and exporting togglefavsong
 module.exports.togglefavSong = async function(req,res){
     try {
         let deleted=false;
@@ -13,13 +14,13 @@ module.exports.togglefavSong = async function(req,res){
         },function(err,favsong){
             if(err){console.log(err,'error in finding');}
             if(favsong){
-                req.flash('success',"remove from the favorite song");
-                
-                console.log("removed");
+               
+                //if song found delete it
+                console.log("favsong removed");
                 favsong.remove();
                 deleted=true;
                 if(req.xhr){
-                    // if we want to populate just the name of the user (we'll not want to send the password in the API), this is how we do it!
+
                     
                     return res.status(200).json({
                        
@@ -32,6 +33,7 @@ module.exports.togglefavSong = async function(req,res){
                 }
                 
             }
+            //if song not found create it
             else{
                let fav= favSongs.create({
                     name:req.query.name,
@@ -40,8 +42,8 @@ module.exports.togglefavSong = async function(req,res){
                     source:req.query.source,
                     user:req.user._id
                 },function(err,favsong){
-                    console.log(favsong);
-                    req.flash('success',"added to your fav song");
+                   
+                    console.log("favsong added");
                     if(req.xhr){
                         // if we want to populate just the name of the user (we'll not want to send the password in the API), this is how we do it!
                         

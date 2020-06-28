@@ -23,14 +23,31 @@ class toggle_favsong{
             .done(function(data) {
                 
                 if (data.data.deleted == true){
-                    console.log(data);
-                    console.log("deleted");
+                   
+                    console.log("Song removed from Favroite");
+                    new Noty({
+                        theme: 'relax',
+                        text: "Song removed from Favroite",
+                        type: 'success',
+                        layout: 'topRight',
+                        timeout: 1500
+                        
+                    }).show()
                     let deletesong = DeleteSong(data.data.newFavSong);
                     
                 }
                 else{
-                    console.log(data);
+                  
                     let newSong = newfavSongDom(data.data.newFavSong);
+                    console.log("Song  added to Favroite");
+                    new Noty({
+                        theme: 'relax',
+                        text: "Song  added to Favroite",
+                        type: 'success',
+                        layout: 'topRight',
+                        timeout: 1500
+                        
+                    }).show()
                     $('#favsong').append(newSong);
                 }
             })

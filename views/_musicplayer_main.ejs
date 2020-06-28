@@ -1,7 +1,11 @@
+
+
 <main class="main border" >
     <div class="border" id="artist_genre_trending">
         
         <section id="artist" class="border">Artists
+            
+            
             <div id="edsheeran"><a id="link" class="togglefavArtist textss" href="/toggleArtist/?name=edsheeran&id=<%=user._id%>&image=edsheeranplaylist">fav</a><a href="#edsheeranplaylist" class="playicon" ></a></div>
             <div id="justin"><a class="togglefavArtist textss" href="/toggleArtist/?name=justin&id=<%=user._id%>&image=justinplaylist">fav</a><a href="#justinplaylist" class="playicon" ></a></div>
             <div id="rihana"><a class="togglefavArtist textss" href="/toggleArtist/?name=rihana&id=<%=user._id%>&image=rihanaplaylist">fav</a><a href="#rihanaplaylist" class="playicon" ></a></div>
@@ -189,3 +193,19 @@
         
     </div>
 </main>
+
+
+<script>
+    $('#right-button').click(function() {
+       event.preventDefault();
+       $('#content').animate({
+         marginLeft: "+=200px"
+       }, "fast");
+    });
+    $('#left-button').click(function() {
+       event.preventDefault();
+       $('#content').animate({
+         marginLeft: "-=200px"
+       }, "fast");
+    });
+ </script>

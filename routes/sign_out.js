@@ -1,5 +1,5 @@
 const express= require('express');
-//importing touter method of express
+//importing router method of express
 const router= express.Router();
 
 //getting homecontroller to use its functions

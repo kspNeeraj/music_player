@@ -1,36 +1,38 @@
-#musicplaylist{
-	height: 0;
-	width: 0;
-	position: fixed;
-	transition: all  ease-in-out;
-}
-#musicplaylist:target{
-	height: 85%;
-	width: 100%;
-	top: 0px;	
-	background-color: black;
-	overflow-y: scroll;
-	color: white;
+#musicplaylist {
+  height: 0;
+  width: 0;
+  position: fixed;
+  transition: all  ease-in-out;
 }
 
-.baricon1{
-	width: 40px;
-	height:40px;
-	background-image: url(images/sound.png);
-	background-size: 100% 100%; 
+#musicplaylist:target {
+  height: 85%;
+  width: 100%;
+  top: 0px;
+  background-color: black;
+  overflow-y: scroll;
+  color: white;
 }
+
+.baricon1 {
+  width: 40px;
+  height: 40px;
+  background-image: url(images/sound.png);
+  background-size: 100% 100%;
+}
+
 /*playicon*/
-.play1{
-	height: 40px;
-	width: 40px;
-	background-image: url(images/play.png);
-	background-size: 100% 100%;
-	display: block;
-	margin: auto;
-	margin-top: 15px;
-	opacity: 0;
-
+.play1 {
+  height: 40px;
+  width: 40px;
+  background-image: url(images/play.png);
+  background-size: 100% 100%;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  opacity: 0;
 }
-.play1:hover{
-	opacity: 1;
+
+.play1:hover {
+  opacity: 1;
 }

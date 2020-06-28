@@ -1,62 +1,66 @@
-.border{
-	border: 2px solid black;
-}
-.center{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.footer{	
-	height: 100px;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	background-color: black;
-	color:white;
-	
-}
-#song_image{
-	height: 100px;
-	width: 20%;
-
-}
-#song_image div{
-	height: 80px;
-	width: 80px;
-	background-image: url(images/john.jpg);
-	background-size: 100% 100%;
+.border {
+  border: 2px solid black;
 }
 
-#music_logo{
-	height: 100px;
-	width: 20%;
-}
-#music_logo div{
-	height:30px;
-	width: 40px;
-	background-image: url(images/sound.png);
-	background-size: 100% 100%;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#song{
-	height: 100px;
-	width: 60%;
-}
-#forward{
-	cursor: pointer;
-	height: 30px;
-	width: 40px;
-	background-image: url(images/forward.png);
-	background-size: 100% 100%;
-}
-#backward{
-	cursor: pointer;
-	height: 30px;
-	width: 40px;
-	background-image: url(images/backward.png);
-	background-size: 100% 100%;
+.footer {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
 }
 
+#song_image {
+  height: 100px;
+  width: 20%;
+}
+
+#song_image div {
+  height: 80px;
+  width: 80px;
+  background-image: url(images/john.jpg);
+  background-size: 100% 100%;
+}
+
+#music_logo {
+  height: 100px;
+  width: 20%;
+}
+
+#music_logo div {
+  height: 30px;
+  width: 40px;
+  background-image: url(images/sound.png);
+  background-size: 100% 100%;
+}
+
+#song {
+  height: 100px;
+  width: 60%;
+}
+
+#forward {
+  cursor: pointer;
+  height: 30px;
+  width: 40px;
+  background-image: url(images/forward.png);
+  background-size: 100% 100%;
+}
+
+#backward {
+  cursor: pointer;
+  height: 30px;
+  width: 40px;
+  background-image: url(images/backward.png);
+  background-size: 100% 100%;
+}

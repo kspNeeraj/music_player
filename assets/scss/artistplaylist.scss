@@ -1,0 +1,237 @@
+body{
+	margin-bottom: 100px;
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+}
+
+.playicon{
+	height: 40px;
+	width: 40px;
+	background-image: url(images/play.png);
+	background-size: 100%;
+	display: block;
+	margin:auto;
+	opacity: 0;
+}
+.playicon:hover{
+	opacity: 1;
+}
+
+#edsheeran{
+	background-image: url(https://musicplayerdig.s3.us-east-2.amazonaws.com/images/edsheeran.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#rihana{
+	background-image: url(https://musicplayerdig.s3.us-east-2.amazonaws.com/images/rihana.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#maroon{
+	background-image: url(https://musicplayerdig.s3.us-east-2.amazonaws.com/images/maroon.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#taylor{
+	background-image: url(https://musicplayerdig.s3.us-east-2.amazonaws.com/images/taylor.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#justin{
+	background-image: url(https://musicplayerdig.s3.us-east-2.amazonaws.com/images/justin.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#bruno{
+	background-image: url(https://musicplayerdig.s3.us-east-2.amazonaws.com/images/bruno.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#john{
+	background-image: url(images/john.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+.artistSong{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+.ArtistText{
+	color: white;
+	font-family: sans-serif;
+	background-color: black;
+}
+
+
+
+
+/*//particular artist play list*/
+#edsheeranplaylist{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all  ease-in-out;
+}
+#edsheeranplaylist:target{
+	height: 85%;
+	width: 100%;
+	top: 0px;	
+	background-color: black;
+}
+#justinplaylist{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all  ease-in-out;
+}
+#justinplaylist:target{
+	height: 85%;
+	width: 100%;
+	top: 0px;	
+}
+#rihanaplaylist{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all  ease-in-out;
+}
+#rihanaplaylist:target{
+	height: 85%;
+	width: 100%;
+	top: 0px;	
+}
+#maroonplaylist{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all  ease-in-out;
+}
+#maroonplaylist:target{
+	height: 85%;
+	width: 100%;
+	top: 0px;	
+}
+#taylorplaylist{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all  ease-in-out;
+}
+#taylorplaylist:target{
+	height: 85%;
+	width: 100%;
+	top: 0px;	
+}
+#brunoplaylist{
+	height: 0;
+	width: 0;
+	position: fixed;
+	transition: all  ease-in-out;
+}
+#brunoplaylist:target{
+	height: 85%;
+	width: 100%;
+	top: 0px;	
+}
+ 
+
+/*1 artist port folio section start*/
+#artistpf{
+	width: 100%;
+	height: 48%;
+	display: inline-block;
+}
+
+.artistimage{
+	width: 30%;
+	height: 100%;
+	display: inline-block;
+	background-size: 100% 100%;	
+}
+#artistportfolio{
+	width: 67%;
+	height: 97%;
+	display: inline-block;
+	vertical-align: top;
+}
+.artistinfo{
+	width: 80%;
+	height: 40%;
+	margin: auto;
+	margin-top: 10px;
+	font-family: sans-serif;
+
+}
+#playall{
+	cursor: pointer;
+	height: 30px;
+	width: 100px;
+	background-image: linear-gradient(to right, #3524b0 ,#be48dd);
+	display: flex;
+	justify-content: center;align-items: center;
+}
+#follow{
+	height: 30px;
+	width: 100px;
+	display: flex;
+	justify-content: center;align-items: center;
+}
+/*artist port folio section end*/
+
+/*3 artist playlist section start*/
+#artistplaylist{
+	width: 100%;
+	height: 50%;
+	display: inline-block;
+	overflow-y: scroll;
+}
+
+/*play icon for artists playlists*/
+.Artistplay{
+	height: 30px;
+	width: 30px;
+	background-image: url(images/play.png);
+	background-size: 100%;
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+	opacity: 0;
+
+}
+.Artistplay:hover{
+	opacity: 1;
+}
+
+
+
+
+#song20{
+	background-image:url("https://musicplayerdig.s3.us-east-2.amazonaws.com/musicImage/lighters.jpg"); 
+}
+#song21{
+	background-image: url("https://musicplayerdig.s3.us-east-2.amazonaws.com/musicImage/what+love+is.jpg");
+}
+#song22{
+	background-image: url("https://musicplayerdig.s3.us-east-2.amazonaws.com/musicImage/pompeii.jpg");
+}
+#song23{
+	background-image: url("https://musicplayerdig.s3.us-east-2.amazonaws.com/musicImage/radioactive.jpg");
+}
+#song24{
+	background-image: url("https://musicplayerdig.s3.us-east-2.amazonaws.com/musicImage/ring+a+ling.jpg");
+}

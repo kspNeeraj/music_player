@@ -37,15 +37,21 @@ class toggle_favartist{
             .done(function(data) {
                 
                 if (data.data.deleted == true){
-                    console.log(data);
-                    console.log("deleted");
+                    new Noty({
+                        theme: 'relax',
+                        text: "fav artist deleted",
+                        type: 'success',
+                        layout: 'topRight',
+                        timeout: 1500
+                        
+                    }).show();
+                    console.log(" fav artist deleted");
                     let deleteartist = DeleteArtist(data.data.newFavArtist);
                     
                 }
                 else{
-                    console.log(data);
+                    
                     let newArtist = newfavartistDom(data.data.newFavArtist);
-                    $('#favartist').append(newArtist);
                     new Noty({
                         theme: 'relax',
                         text: "fav artist added",
@@ -54,6 +60,8 @@ class toggle_favartist{
                         timeout: 1500
                         
                     }).show();
+                    $('#favartist').append(newArtist);
+                   
                     
                 }
             })

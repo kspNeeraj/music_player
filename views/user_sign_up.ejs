@@ -1,13 +1,17 @@
 
+<link rel="stylesheet" href="./css/signup.css" >
 <div id="user_signup1">
     
     <div id="user_details1">
         <form id="user_details1" action="/create" method="POST">
             <div>
-                <input class="box_size" type="name" name="name" placeholder="enter your name" required >
+                <input class="box_size" type="name" name="name" placeholder="enter your name"  required >
             </div>
             <div>
-                <input class="box_size" type="email" name="email" placeholder="enter your email" required >
+                <input readonly class="box_size" type="email" name="email" placeholder="enter your email" value="<%= email %>" required >
+            </div>
+            <div>
+                <input class="box_size" type="text" name="verify_address" placeholder="enter the address sent on your email" required>
             </div>
             <div>
                 <input class="box_size" type="password" name="password" placeholder="password" required>

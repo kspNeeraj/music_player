@@ -1,5 +1,6 @@
-
+//importing favartist schema
 const favArtist = require('../models/favArtist');
+//importing user schema
 const User= require('../models/user');
 const newLocal = false;
 module.exports.togglefavartist = async function(req,res){
@@ -26,10 +27,11 @@ module.exports.togglefavartist = async function(req,res){
                 
                 
                 artist.remove();       
-                console.log('removed',deleted,mess);
-                req.flash('success',"removed from fav artist");
+                
+                
+            
                 if(req.xhr){
-                    // if we want to populate just the name of the user (we'll not want to send the password in the API), this is how we do it!
+                  
                     
                     return res.status(200).json({
                        
@@ -51,7 +53,7 @@ module.exports.togglefavartist = async function(req,res){
                         user:req.user._id
                     },function(err,artist){
                         if(err){console.log(err,'not found');}
-                        req.flash('success',"Added to your favArtist");
+                       
      //   }
                         console.log("favartist added");
                         if(req.xhr){
