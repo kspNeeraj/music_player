@@ -87,3 +87,32 @@ function ringaling(y){
 	chnagesongnamforartistplaylist(4,y);
 	changeSongforartistplaylist(4,y);
 }
+
+
+
+
+
+
+
+
+//for artist section in main
+//change favartist link hover title
+function changeTitle(n){
+    var elmnt=document.getElementsByClassName('togglefavartist')[n];
+    var x= document.createAttribute("title");
+    x.value="remove from favorite artist";
+    var y= document.createAttribute("onclick");
+    y.value=`changetitle(${n})`;
+    elmnt.setAttributeNode(x);
+    elmnt.setAttributeNode(y);
+}
+//change favartist link hover title title
+function changetitle(n){
+    var elmnt=document.getElementsByClassName('togglefavartist')[n];
+    var x= document.createAttribute("title");
+    x.value="add to favorite artist";
+    var y= document.createAttribute("onclick");
+    y.value=`changeTitle(${n})`;
+    elmnt.setAttributeNode(x);
+    elmnt.setAttributeNode(y);
+}

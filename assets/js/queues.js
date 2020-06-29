@@ -16,6 +16,29 @@ function apend(x,key){
                         
                     }).show()
     document.getElementById('queues').append(cln); 
-    window.alert('added to queue');
+    // window.alert('added to queue');
 }
+
+//change favartist link hover title
+function changeTitle(n){
+    var elmnt=document.getElementsByClassName('togglefavartist')[n];
+    var x= document.createAttribute("title");
+    x.value="remove from favartist";
+    var y= document.createAttribute("onclick");
+    y.value=`changetitle(${n})`;
+    elmnt.setAttributeNode(x);
+    elmnt.setAttributeNode(y);
+}
+//change favartist link hover title title
+function changetitle(n){
+    var elmnt=document.getElementsByClassName('togglefavartist')[n];
+    var x= document.createAttribute("title");
+    x.value="add to favartist";
+    var y= document.createAttribute("onclick");
+    y.value=`changeTitle(${n})`;
+    elmnt.setAttributeNode(x);
+    elmnt.setAttributeNode(y);
+}
+
+
 

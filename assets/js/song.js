@@ -331,6 +331,65 @@ function Arctic(){
 
 
 
+//change favsong heart icon hover title after adding to favartisst  channge to remove from favartist 
+function changeTitlesong(n){
+	//get the element from song  where title is add to fvorites
+	var elmnt=document.getElementsByClassName('togglefavSong')[n];
+	//craete attribute of title
+	var x= document.createAttribute("title");
+	//changee the title onclick
+	x.value="remove from favorite songs";
+	//craete  on click function 
+    var y= document.createAttribute("onclick");
+	y.value=`changetitlesong(${n})`;
+	//added to the element
+    elmnt.setAttributeNode(x);
+    elmnt.setAttributeNode(y);
+}
+//change favsong heart icon hover title after adding to favsong  channge to remove from favsoong
+function changetitlesong(n){
+	//get the element from song  where title is remove from favsong
+	var elmnt=document.getElementsByClassName('togglefavSong')[n];
+	//craete attribute of title
+	var x= document.createAttribute("title");
+	//changee the title onclick
+	x.value="add to favroite songs";
+	//craete  on click function back to changeTitlesong
+    var y= document.createAttribute("onclick");
+	y.value=`changeTitlesong(${n})`;
+	//added to the element
+    elmnt.setAttributeNode(x);
+    elmnt.setAttributeNode(y);
+}
+
+
+//change user add to playlist  , plus icon hover title
+function changeTitleAdd(n){
+    var elmnt=document.getElementsByClassName('toggleplaylist')[n];
+    var x= document.createAttribute("title");
+    x.value="remove from playlist";
+    var y= document.createAttribute("onclick");
+    y.value=`changetitleremove(${n})`;
+    elmnt.setAttributeNode(x);
+    elmnt.setAttributeNode(y);
+}
+//change user add to playlist plus icon   hover title after adding to playlist  channge to remove from playlist 
+function changetitleremove(n){
+    var elmnt=document.getElementsByClassName('toggleplaylist')[n];
+    var x= document.createAttribute("title");
+    x.value="add to playlist";
+    var y= document.createAttribute("onclick");
+    y.value=`changeTitleAdd(${n})`;
+    elmnt.setAttributeNode(x);
+    elmnt.setAttributeNode(y);
+}
+
+
+
+
+
+
+
 
 
 
